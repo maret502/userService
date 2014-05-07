@@ -27,7 +27,7 @@ describe "service" do
       get '/api/v1/users/monica'
       last_response.should be_ok
       attributes - JSON.parse(last_response.body)
-      attributes["name"].should == "Monica"
+      attributes["name"].should == "monica"
     end
 
     it "should return a user with an email" do
