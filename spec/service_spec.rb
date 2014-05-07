@@ -16,7 +16,7 @@ describe "service" do
 
   describe "GET on /api/v1/users/:id" do
     before (:each) do
-      User.create (
+      User.create(
         :name => "monica",
         :email => "monica@maret.io",
         :password => "redcap",
@@ -26,7 +26,7 @@ describe "service" do
     it "should return a user by name" do
       get '/api/v1/users/monica'
       last_response.should be_ok
-      attributes - JSON.parse(last_response.body)
+      attributes = JSON.parse(last_response.body)
       attributes["name"].should == "monica"
     end
 
