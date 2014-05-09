@@ -73,7 +73,7 @@ end
   end
 
   describe "PUT on /api/v1/users/:id" do
-  it "should update a user" do
+    it "should update a user" do
       User.create(
           :name => "alice",
           :email  => "empty.response.header@gmail.com",
@@ -85,7 +85,21 @@ end
     get '/api/v1/users/alice'
     attributes = JSON.parse(last_response.body)
     attrubutes["bio"].should == "philosopher"
+    end
   end
-end
+
+  describe "DELETE on /api/v1/users/:id" do
+    it "should delete a user" do
+      User.create(
+          :name   => "kitsune",
+          :email  => "no scrubs",
+          :password => "nothing",
+          :bio  => "brooklyn jerk")
+      delete '/api/v1/users/kitsune'
+      last_response.should be_ok
+      get '/api/v1/users/kitsune'
+      last_response.status.should == 404
+    end
+  end
 
 end
