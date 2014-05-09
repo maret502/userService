@@ -27,10 +27,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-              <folding>
-                <marker date="1399436843000" expanded="true" signature="0:67" placeholder="development:" />
-                <marker date="1399436843000" expanded="true" signature="68:120" placeholder="test:" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,8 +65,8 @@
       <file leaf-file-name="service.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30678147" vertical-offset="0" max-vertical-offset="929">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.048439182" vertical-offset="0" max-vertical-offset="929">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -337,10 +334,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding>
-            <marker date="1399436843000" expanded="true" signature="0:67" placeholder="development:" />
-            <marker date="1399436843000" expanded="true" signature="68:120" placeholder="test:" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -360,14 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/001_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
@@ -376,10 +362,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30678147" vertical-offset="0" max-vertical-offset="929">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.048439182" vertical-offset="0" max-vertical-offset="929">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
           <folding />
         </state>
       </provider>

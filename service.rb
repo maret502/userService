@@ -1,7 +1,7 @@
 require 'rubygems'
-require 'activerecord'
+require 'active_record'
 require 'sinatra'
-require 'models/user'
+require_relative 'models/user.rb'
 
 #setting up the environment
 env_index = ARGV.index("-e")
