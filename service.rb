@@ -20,3 +20,17 @@ get '/api/v1/users/:name' do
     error 404, {:error => "user not found"}.to_json
   end
 end
+
+#create a new user
+post '/api/v1/users/' do
+  begin
+    user = User.create(JSON.parse(request.body.read))
+    if user.valid?
+      user.to_json
+    else
+      error 400, user.errors.to_json
+    end
+  rescue => e
+    error 404, e.message.to_json
+  end
+end
