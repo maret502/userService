@@ -59,9 +59,9 @@ end
   describe "POST on /api/v1/users" do
     it "should create a user" do
       post '/api/v1/users', {
-          :name     => "sophie"
-          :email    => "yt@502.io"
-          :password =>  "holla"
+          :name     => "sophie",
+          :email    => "yt@502.io",
+          :password =>  "holla",
           :bio      =>  "astrologer"}.to_json
       last_response.should be_ok
       get '/api/v1/users/sophie'
@@ -71,5 +71,21 @@ end
       attributes["bio"].should == "astrologer"
     end
   end
+
+  describe "PUT on /api/v1/users/:id" do
+  it "should update a user" do
+      User.create(
+          :name => "alice",
+          :email  => "empty.response.header@gmail.com",
+          :password => "whatever",
+          :bio  => "black magician")
+      put '/api/v1/users/alice', {
+          :bio => "philosopher"}.to_json
+      last_response.should be_ok
+    get '/api/v1/users/alice'
+    attributes = JSON.parse(last_response.body)
+    attrubutes["bio"].should == "philosopher"
+  end
+end
 
 end
