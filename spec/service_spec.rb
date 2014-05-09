@@ -56,4 +56,20 @@ describe "service" do
   end
 end
 
+  describe "POST on /api/v1/users" do
+    it "should create a user" do
+      post '/api/v1/users', {
+          :name     => "sophie"
+          :email    => "yt@502.io"
+          :password =>  "holla"
+          :bio      =>  "astrologer"}.to_json
+      last_response.should be_ok
+      get '/api/v1/users/sophie'
+      attributes = JSON.parse(last_response.body)
+      attributes["name"].should == "sophie"
+      attributes["email"].should == "yt@502.io"
+      attributes["bio"].should == "astrologer"
+    end
+  end
+
 end
