@@ -10,6 +10,15 @@ env = env_arg || ENV["SINATRA_ENV"] || "development"
 databases = YAML.load_file("config/database.yml")
 ActiveRecord::Base.establish_connection(databases[env])
 
+# creating fixture data (only in test mode)
+if env == 'test'
+  User.destroy_all
+  User.create(
+      :name => "jerk",
+      :email => "who cares",
+      :bio => "some guy")
+  log.debug "fixture data created in test database..."
+end
 
 #HTTP entry points
 #get a user by name

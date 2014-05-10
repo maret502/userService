@@ -30,3 +30,8 @@ it "should update a user" do
   user["bio"].should == "web dev and history nerd"
   User.find_by_name("monica").should == user
 end
+
+it "should destroy a user" do
+  User.destroy("jerk").should == true
+  User.find_by_name("jerk").should be_nil
+end
