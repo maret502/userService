@@ -2,6 +2,11 @@ require 'rubygems'
 require 'active_record'
 require 'sinatra'
 require_relative 'models/user.rb'
+require 'logger'
+
+# log levels -> DEBUG < INFO < WARN < ERROR < FATAL < UNKNOWN
+log = Logger.new(STDOUT)
+log.level = Logger::DEBUG
 
 #setting up the environment
 env_index = ARGV.index("-e")
@@ -9,6 +14,13 @@ env_arg = ARGV[env_index +1] if env_index
 env = env_arg || ENV["SINATRA_ENV"] || "development"
 databases = YAML.load_file("config/database.yml")
 ActiveRecord::Base.establish_connection(databases[env])
+
+# connecting to the database
+use ActiveRecord::ConnectionAdapters::ConnectionManagement
+databases = YAML.load_file("config/database.yml")
+ActiveRecord::Base.establish_connection(databases[env])
+log.debug "#{databases[env]['database']} database connection established..."
+
 
 # creating fixture data (only in test mode)
 if env == 'test'
