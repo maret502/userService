@@ -35,3 +35,13 @@ it "should destroy a user" do
   User.destroy("jerk").should == true
   User.find_by_name("jerk").should be_nil
 end
+
+it "should verify login credentials" do
+  user = User.login("monica", "redcap")
+  user["name"].should == "monica"
+end
+
+it "should return nil with invalid credentials" do
+  User.login("monica", "holla").should be_nil
+end
+end
