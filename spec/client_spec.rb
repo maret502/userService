@@ -24,3 +24,9 @@ it "should create a user" do
   User.find_by_name("sophie").should == user
 end
 
+it "should update a user" do
+  user = User.update("monica", {:bio => "web dev and history nerd"})
+  user["name"].should == "monica"
+  user["bio"].should == "web dev and history nerd"
+  User.find_by_name("monica").should == user
+end
