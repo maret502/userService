@@ -44,4 +44,3 @@ end
 it "should return nil with invalid credentials" do
   User.login("monica", "holla").should be_nil
 end
-end
