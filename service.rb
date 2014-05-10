@@ -10,6 +10,7 @@ env = env_arg || ENV["SINATRA_ENV"] || "development"
 databases = YAML.load_file("config/database.yml")
 ActiveRecord::Base.establish_connection(databases[env])
 
+
 #HTTP entry points
 #get a user by name
 get '/api/v1/users/:name' do
